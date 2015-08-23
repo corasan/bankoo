@@ -1,0 +1,47 @@
+body {
+    padding-top: 40px
+}
+
+/*JUMBOTRON CSS*/
+.jumbotron p {
+    padding-top: 20px
+}
+
+.jumbotron {
+    background: linear-gradient(to bottom right, #1AD6FD, #1D62F0);
+    height: 480px;
+    text-align: center;
+    color: #fff;
+    padding-top: 100px
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: rgba(2,82,198, 0)
+}
+
+.btn-lg, .btn-group-lg>.btn {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 0px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #083e7f;
+    border-color: #0252c6;
+}
+
+.btn {
+    border: 2px solid;
+}
+
+/*NAVBAR CSS*/
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
