@@ -9,6 +9,7 @@ class TransactionsController < ApplicationController
         # @pending = current_user.transactions.where(status: "Pending")
         # @rejected = current_user.transactions.where(status: "Rejected")
         @transactions = current_user.transactions
+        @total = current_user.user_balance
     end
 
     # GET /transactions/1
