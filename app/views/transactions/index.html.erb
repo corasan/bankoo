@@ -14,7 +14,7 @@
             <% @transactions.each do |transaction| %>
             <tr>
                 <td><%= transaction.created_at.strftime("%m/%d/%Y") %></td>
-                <td><%= transaction.amount %></td>
+                <td>$<%= transaction.amount %></td>
                 <td><%= transaction.type = "Deposit" %></td>
 <!-- <td><%= transaction.status %></td> -->
 <!-- <td><%= link_to 'Show', transaction %></td>
