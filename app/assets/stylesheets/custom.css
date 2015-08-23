@@ -1,5 +1,5 @@
 body {
-    padding-top: 40px
+    padding-top: 50px
 }
 
 /*JUMBOTRON CSS*/
@@ -12,7 +12,8 @@ body {
     height: 480px;
     text-align: center;
     color: #fff;
-    padding-top: 100px
+    padding-top: 100px;
+    width: 100%;
 }
 
 .btn-primary {
@@ -44,4 +45,17 @@ body {
 
 .navbar-inverse .navbar-brand {
     color: #fff;
+}
+
+.panel {
+    width: 70%;
+    margin-top: 50px;
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.thumbnail {
+    text-align: center;
+    width: 70%;
+    margin-left: 60px;
 }

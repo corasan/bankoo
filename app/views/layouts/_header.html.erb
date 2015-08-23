@@ -7,6 +7,7 @@
         <ul class="nav navbar-nav navbar-right">
             <% if current_user %>
             <li>
+                <%= link_to "Transactions", transactions_path %>
                 <li class="dropdown">
                     <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"><%= current_user.email %>
                         <span class="caret"></span>

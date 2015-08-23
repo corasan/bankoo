@@ -1,0 +1,31 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<h1 style="text-align:center">Listing Transactions</h1>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <table class="table table-hover">
+            <tr>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Type</th>
+<!-- <th>Status</th> -->
+            </tr>
+
+            <% @transactions.each do |transaction| %>
+            <tr>
+                <td><%= transaction.created_at.strftime("%m/%d/%Y") %></td>
+                <td>$<%= transaction.amount %></td>
+                <td><%= transaction.type = "Deposit" %></td>
+<!-- <td><%= transaction.status %></td> -->
+<!-- <td><%= link_to 'Show', transaction %></td>
+                <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+                <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+            </tr>
+            <% end %>
+        </table>
+    </div>
+</div>
+
+<br>
+
+<%= link_to 'New Transaction', new_transaction_path %>
