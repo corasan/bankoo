@@ -5,9 +5,7 @@
         <div class="panel-body">
             <table class="table table-hover">
                 <% balance = [] %>
-                <% @transactions.each do |transaction| %>
-                <% balance << @total + transaction.amount %>
-                <% end %>
+                <% @transactions.each {|transaction| balance << @total + transaction.amount} %>
                 <caption>Balance: $<%= balance.inject{|a,b| a + b} %></caption>
                 <tr>
                     <th>Date</th>
@@ -33,6 +31,7 @@
 
     <br>
     <div style="text-align:center">
-        <%= link_to 'New Transaction', new_transaction_path, class: "btn btn-default" %>
+        <%= link_to 'Deposit', new_transaction_path, class: "btn btn-default" %>
+        <%= link_to 'Withdraw', new_transaction_path, class: "btn btn-default" %>
     </div>
 </div>

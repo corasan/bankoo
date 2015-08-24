@@ -5,7 +5,7 @@ class TransactionsController < ApplicationController
     # GET /transactions
     # GET /transactions.json
     def index
-        # @approved = current_user.transactions.where(status: "Approved")
+        @deposit = current_user.transactions.where(type: "Deposit")
         # @pending = current_user.transactions.where(status: "Pending")
         # @rejected = current_user.transactions.where(status: "Rejected")
         @transactions = current_user.transactions
@@ -74,6 +74,6 @@ class TransactionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def transaction_params
-        params.require(:transaction).permit(:date, :amount, :type, :status)
+        params.require(:transaction).permit(:date, :amount, :type => "Deposit")
     end
 end
