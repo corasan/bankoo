@@ -76,5 +76,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  INFORMANT_API_KEY = 2aff7cff171c0f14f9a36dba2cbd0fe8
 end
