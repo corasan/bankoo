@@ -1,31 +1,37 @@
 <!-- <p id="notice"><%= notice %></p> -->
-
-<h1 style="text-align:center">Listing Transactions</h1>
-<div class="panel panel-default">
-    <div class="panel-body">
-        <table class="table table-hover">
-            <tr>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>Type</th>
+<div>
+    <h1 class="row" style="text-align:center">Transactions</h1>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <table class="table table-hover">
+                <% balance = [] %>
+                <% @transactions.each {|transaction| balance << @total + transaction.amount} %>
+                <caption>Balance: $<%= balance.inject{|a,b| a + b} %></caption>
+                <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Type</th>
 <!-- <th>Status</th> -->
-            </tr>
+                </tr>
 
-            <% @transactions.each do |transaction| %>
-            <tr>
-                <td><%= transaction.created_at.strftime("%m/%d/%Y") %></td>
-                <td>$<%= transaction.amount %></td>
-                <td><%= transaction.type = "Deposit" %></td>
+                <% @transactions.each do |transaction| %>
+                <tr>
+                    <td><%= transaction.created_at.strftime("%m/%d/%Y") %></td>
+                    <td>$<%= transaction.amount %></td>
+                    <td><%= transaction.type = "Deposit" %></td>
 <!-- <td><%= transaction.status %></td> -->
 <!-- <td><%= link_to 'Show', transaction %></td>
                 <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
                 <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-            </tr>
-            <% end %>
-        </table>
+                </tr>
+                <% end %>
+            </table>
+        </div>
+    </div>
+
+    <br>
+    <div style="text-align:center">
+        <%= link_to 'Deposit', new_transaction_path, class: "btn btn-default"%>
+        <%= link_to 'Withdraw', new_transaction_path, class: "btn btn-default" %>
     </div>
 </div>
-
-<br>
-
-<%= link_to 'New Transaction', new_transaction_path %>
