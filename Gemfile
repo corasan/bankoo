@@ -36,6 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :production do
     gem 'rails_12factor'
     gem 'pg', '~> 0.18.2'
+    gem 'informant-rails'
 end
 
 group :development, :test do
