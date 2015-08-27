@@ -1,28 +1,30 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
-        <%= render "notice" %>
-        <p>
-            <strong>Date:</strong>
-            <%= @transaction.date %>
-        </p>
+        <div class="blank-space">
+            <%= render "notice" %>
+            <p>
+                <strong>Date:</strong>
+                <%= @transaction.date %>
+            </p>
 
-        <p>
-            <strong>Amount:</strong>
-            <%= @transaction.amount %>
-        </p>
+            <p>
+                <strong>Amount:</strong>
+                <%= @transaction.amount %>
+            </p>
 
-        <p>
-            <strong>Type:</strong>
-            <%= @transaction.t_type %>
-        </p>
+            <p>
+                <strong>Type:</strong>
+                <%= @transaction.t_type %>
+            </p>
 
-        <p>
-            <strong>Status:</strong>
-            <%= @transaction.status %>
-        </p>
+            <p>
+                <strong>Status:</strong>
+                <%= @transaction.status %>
+            </p>
 
-        <%= link_to 'Edit', edit_transaction_path(@transaction) %>
-        |
-        <%= link_to 'Back', transactions_path %>
+            <%= link_to 'Edit', edit_transaction_path(@transaction) %>
+            |
+            <%= link_to 'Back', transactions_path %>
+        </div>
     </div>
 </div>
