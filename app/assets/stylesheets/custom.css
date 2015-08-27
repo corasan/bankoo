@@ -1,5 +1,6 @@
 body .row {
-    padding-top: 70px
+    padding-top: 70px;
+    margin-bottom: 0px;
 }
 
 body .jumbo-home {
@@ -12,7 +13,8 @@ body .jumbo-home {
 }
 
 .jumbotron {
-    background: linear-gradient(to bottom right, #1AD6FD, #1D62F0);
+    /*background: linear-gradient(to bottom right, #1AD6FD, #1D62F0);*/
+    background-color: #b21414;
     height: 500px;
     text-align: center;
     color: #fff;
@@ -22,37 +24,107 @@ body .jumbo-home {
 
  div .home .btn-primary {
     color: #fff;
-    background-color: rgba(2,82,198, 0)
+    background-color: rgba(2,82,198, 0);
 }
 
 .btn-lg, .btn-group-lg>.btn {
     padding: 10px 16px;
     font-size: 18px;
     line-height: 1.33;
-    border-radius: 0px;
 }
 
 .home .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #083e7f;
-    border-color: #0252c6;
+    /*background-color: #083e7f;*/
+    background-color: rgba(146,15,15,1);
+    border-color: #760000;
 }
 
 .btn {
     border: 2px solid;
+    border-radius: 0px;
 }
 
 /*NAVBAR CSS*/
 .navbar-inverse .navbar-nav>li>a {
-    color: #fff;
+    color: #b21414;
 }
 
 .navbar-inverse .navbar-brand {
-    color: #fff;
+    color: #b21414;
 }
 
 .thumbnail {
     text-align: center;
     width: 70%;
     margin-left: 60px;
+}
+
+.btn-default {
+    color: #b21414;
+    border-color: #b21414;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open {
+    border-color: #b21414;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+.panel-danger>.panel-heading {
+    background-color: #b21414;
+    color: white;
+    text-align: center;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-color: #b21414;
+}
+
+.center-panel {
+    padding-top: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    height: 600px;
+    border-radius: 0px;
+}
+
+.panel-heading{
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-color: #b21414;
+}
+
+.footer-links {
+    margin-top: -50px;
+    color: #b21414;
+}
+
+.footer-links {
+    margin-left: 300px;
+    text-align: left;
+}
+
+li {
+    list-style-type: none;
+}
+
+footer .jumbotron {
+    height: 300px;
+    background-color: #222;
+    margin: 0 auto -155px;
+}
+
+/*body .row {
+    margin-bottom: 200px;
+}*/
+
+.fa {
+    color: #b21414;
+}
+
+div .blank-space {
+    margin-top: 100px;
+    margin-bottom: 200px;
 }
