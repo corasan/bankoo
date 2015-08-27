@@ -1,6 +1,5 @@
 <%= simple_form_for(@transaction, html: {class: "form-signin"}) do |f| %>
 <%= f.error_notification %>
-
 <div class="form-inline">
 <!-- <%= f.input :date %> -->
     <div class="form-group">
@@ -15,6 +14,6 @@
 </div>
 <br>
 <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-primary" %>
 </div>
 <% end %>

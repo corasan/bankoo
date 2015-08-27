@@ -1,14 +1,12 @@
 <h1 style="text-align:center">New Transaction</h1>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-default" style="text-align:center">
             <h4>Transaction</h4>
             <div class="panel-body">
                 <%= render 'form' %>
             </div>
         </div>
+        <%= link_to 'Back', transactions_path, class: "btn btn-primary" %>
     </div>
 </div>
-
-
-<%= link_to 'Back', transactions_path %>

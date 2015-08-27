@@ -1,5 +1,9 @@
-body {
-    padding-top: 50px
+body .row {
+    padding-top: 70px
+}
+
+body .jumbo-home {
+    padding-top: 50px;
 }
 
 /*JUMBOTRON CSS*/
@@ -9,14 +13,14 @@ body {
 
 .jumbotron {
     background: linear-gradient(to bottom right, #1AD6FD, #1D62F0);
-    height: 480px;
+    height: 500px;
     text-align: center;
     color: #fff;
     padding-top: 100px;
     width: 100%;
 }
 
-.btn-primary {
+ .home .btn-primary {
     color: #fff;
     background-color: rgba(2,82,198, 0)
 }
@@ -28,7 +32,7 @@ body {
     border-radius: 0px;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+.home .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
     background-color: #083e7f;
     border-color: #0252c6;
@@ -45,13 +49,6 @@ body {
 
 .navbar-inverse .navbar-brand {
     color: #fff;
-}
-
-.panel {
-    width: 70%;
-    margin-top: 50px;
-    margin-left: 220px;
-    padding: 20px;
 }
 
 .thumbnail {
