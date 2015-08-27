@@ -20,7 +20,7 @@ body .jumbo-home {
     width: 100%;
 }
 
- .home .btn-primary {
+ div .home .btn-primary {
     color: #fff;
     background-color: rgba(2,82,198, 0)
 }
