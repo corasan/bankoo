@@ -1,22 +1,30 @@
-<div class="footer-links">
-    <div class="row">
-        <div class="col-md-4">
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
-            </ul>
-        </div>
+<footer>
+    <div class="jumbotron">
+        <div class="footer-links">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul>
+                        <li><strong>About</strong></li>
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
 
-        <div class="col-md-4">
-            <ul>
-                <li>Transactions</li>
-                <li>Profile</li>
-                <li>FAQ</li>
-            </ul>
+                <div class="col-md-4">
+                    <ul><strong>Links</strong></li>
+                        <li>Transactions</li>
+                        <li>Profile</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <strong>Connect with us<strong><br>
+                    <%= link_to '<i class="fa fa-github fa-3x"></i>'.html_safe, "https://github.com/henrypl95/bankoo", target: "_blank" %>
+                    &nbsp;<%= link_to '<i class="fa fa-twitter fa-3x"></i>'.html_safe, href: "https://twitter.com/henrypl95", target: "_blank"%>
+                    &nbsp;<%= link_to '<i class="fa fa-linkedin fa-3x"></i>'.html_safe, href: "https://github.com/henrypl95/bankoo", target: "_blank" %>
+                </div>
+            </div>
         </div>
-        <!-- <div class="col-md-12">
-            <p style="color:white; text-align:center">Bankoo</p>
-        </div> -->
     </div>
-</div>
+</footer>

@@ -1,15 +1,10 @@
 body .row {
-    padding-top: 70px
+    padding-top: 70px;
+    margin-bottom: 0px;
 }
 
 body .jumbo-home {
     padding-top: 50px;
-}
-
-footer .jumbotron {
-    height: 300px;
-    background-color: #222;
-    margin: 0 auto -155px;
 }
 
 /*JUMBOTRON CSS*/
@@ -102,11 +97,34 @@ footer .jumbotron {
 }
 
 .footer-links {
+    margin-top: -50px;
     color: #b21414;
 }
 
-li {
+.footer-links {
     margin-left: 300px;
     text-align: left;
+}
+
+li {
     list-style-type: none;
+}
+
+footer .jumbotron {
+    height: 300px;
+    background-color: #222;
+    margin: 0 auto -155px;
+}
+
+/*body .row {
+    margin-bottom: 200px;
+}*/
+
+.fa {
+    color: #b21414;
+}
+
+div .blank-space {
+    margin-top: 100px;
+    margin-bottom: 200px;
 }

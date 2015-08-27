@@ -1,43 +1,45 @@
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
-        <!-- <%= render "notice" %> -->
-        <div>
-            <h1 class="row" style="text-align:center">Transaction History</h1>
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <table class="table table-hover">
+        <h1 class="row" style="text-align:center">Transaction History</h1>
+        <div class="blank-space">
+<!-- <%= render "notice" %> -->
+            <div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table class="table table-hover">
 
-                        <tr>
-                            <th>Date</th>
-                            <th>Amount</th>
-                            <th>Type</th>
-                        </tr>
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Type</th>
+                            </tr>
 
-                        <% @transactions.each do |transaction| %>
-                        <tr>
-                            <td><%= transaction.created_at.strftime("%m/%d/%Y") %></td>
-                            <% if transaction.t_type == "withdraw" %>
-                            <td>-$<%= transaction.amount %></td>
-                            <% else %>
-                            <td>&nbsp;$<%= transaction.amount %></td>
-                            <% end %>
+                            <% @transactions.each do |transaction| %>
+                            <tr>
+                                <td><%= transaction.created_at.strftime("%m/%d/%Y") %></td>
+                                <% if transaction.t_type == "withdraw" %>
+                                <td>-$<%= transaction.amount %></td>
+                                <% else %>
+                                <td>&nbsp;$<%= transaction.amount %></td>
+                                <% end %>
 <!-- CHECK IF THE TYPE OF TRANSACTION IS DEPOSIT OR WITHDRAW -->
-                            <% if transaction.t_type == "deposit" %>
-                            <% @balance = @total += transaction.amount %>
-                            <% elsif transaction.t_type == "withdraw" %>
-                            <% @balance -= transaction.amount %>
+                                <% if transaction.t_type == "deposit" %>
+                                <% @balance = @total += transaction.amount %>
+                                <% elsif transaction.t_type == "withdraw" %>
+                                <% @balance -= transaction.amount %>
+                                <% end %>
+                                <td><%= transaction.t_type %></td>
+                            </tr>
                             <% end %>
-                            <td><%= transaction.t_type %></td>
-                        </tr>
-                        <% end %>
-                        <caption>Balance: $<%= @balance %></caption>
-                    </table>
+                            <caption>Balance: $<%= @balance %></caption>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <br>
-            <div style="text-align:center">
-                <%= link_to "Deposit/Withdraw", new_transaction_path, class: "btn btn-default"%>
+                <br>
+                <div style="text-align:center">
+                    <%= link_to "Deposit/Withdraw", new_transaction_path, class: "btn btn-default"%>
+                </div>
             </div>
         </div>
     </div>
