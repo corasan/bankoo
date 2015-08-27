@@ -1,19 +1,19 @@
 <%= simple_form_for(@transaction, html: {class: "form-signin"}) do |f| %>
 <%= f.error_notification %>
-
 <div class="form-inline">
 <!-- <%= f.input :date %> -->
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-addon">$</div>
             <%= f.input :amount, required: true, label: false, placeholder: "Amount to deposit" %>
-<!-- <%= f.input :type %> -->
-<!-- <%= f.input :status %> -->
         </div>
-    </div>
+    </div><br>
+    Type:
+    <br><%= f.input :t_type, required: true, label: false %>
+<!-- <%= f.input :status %> -->
 </div>
 <br>
 <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-primary" %>
 </div>
 <% end %>
