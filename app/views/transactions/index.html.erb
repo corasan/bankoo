@@ -2,7 +2,8 @@
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
         <div class="blank-space">
-<!-- <%= render "notice" %> -->
+            <!-- <%= render "notice" %> -->
+            <%= current_user.first_name %>
             <div class="t-table">
                 <div class="panel panel-default">
                     <div class="panel-body">
@@ -22,7 +23,6 @@
                                 <% else %>
                                 <td>&nbsp;<%= number_to_currency(transaction.amount) %></td>
                                 <% end %>
-<!-- CHECK IF THE TYPE OF TRANSACTION IS DEPOSIT OR WITHDRAW -->
                                 <% if transaction.t_type == "deposit" %>
                                 <% transaction.t_type = "Deposit" %>
                                 <% @balance = @total += transaction.amount %>
